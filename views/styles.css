@@ -1,0 +1,26 @@
+h1 {
+	margin:50px 0px;
+}
+
+.item-container {
+	margin-top: 50px;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin-bottom: 30px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	box-shadow: 2px 2px 2px #ccc;
+}
+
+.display-none {
+	display:none;
+}
+
+.display-block {
+	display: block;
+}

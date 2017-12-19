@@ -1,0 +1,21 @@
+[
+ {
+  "id":"tv1",
+  "name":"TV Uno",
+  "parent_id":"0",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque explicabo quae autem est perferendis eius. Reiciendis quis, dolor sunt officiis eius suscipit ex, nostrum hic totam vel excepturi quos repellendus.",
+  "foto":"https://http2.mlstatic.com/smart-tv-led-4k-android-tv-49-xbr-49x705d-sony-store-D_NQ_NP_461015-MLA25127909442_102016-F.jpg"
+ }, 
+ {
+  "id":"tv2",
+  "name":"TV Dos",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque explicabo quae autem est perferendis eius. Reiciendis quis, dolor sunt officiis eius suscipit ex, nostrum hic totam vel excepturi quos repellendus.",
+  "foto":"https://dzvfs5sz5rprz.cloudfront.net/media/catalog/product/cache/1/image/1200x/9df78eab33525d08d6e5fb8d27136e95/p/a/panasonic_full_hd_led_tv_th32d310m_-2.jpg"
+ }, 
+ {
+  "id":"tv3",
+  "name":"TV Tres",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque explicabo quae autem est perferendis eius. Reiciendis quis, dolor sunt officiis eius suscipit ex, nostrum hic totam vel excepturi quos repellendus.",
+  "foto":"https://dzvfs5sz5rprz.cloudfront.net/media/catalog/product/cache/1/image/1200x/9df78eab33525d08d6e5fb8d27136e95/e/c/ecostar_40_smart_led_tv_cx-40u857_2.jpg"
+ }
+]

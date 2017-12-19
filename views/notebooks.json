@@ -1,0 +1,21 @@
+[
+ {
+  "id":"nbook1",
+  "name":"Notebook Uno",
+  "parent_id":"0",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque explicabo quae autem est perferendis eius. Reiciendis quis, dolor sunt officiis eius suscipit ex, nostrum hic totam vel excepturi quos repellendus.",
+  "foto":"http://cdn.cetrogar.com.ar/media/catalog/product/cache/1/image/1200x/9df78eab33525d08d6e5fb8d27136e95/C/M/CM2015-1.jpg"
+ }, 
+ {
+  "id":"nbook2",
+  "name":"Notebook Dos",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque explicabo quae autem est perferendis eius. Reiciendis quis, dolor sunt officiis eius suscipit ex, nostrum hic totam vel excepturi quos repellendus.",
+  "foto":"https://www.notebookcheck.net/typo3temp/_processed_/8/1/csm_asusUL30VT_3_6c14c3d7c5.jpg"
+ }, 
+ {
+  "id":"nbook3",
+  "name":"Notebook Tres",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque explicabo quae autem est perferendis eius. Reiciendis quis, dolor sunt officiis eius suscipit ex, nostrum hic totam vel excepturi quos repellendus.",
+  "foto":"https://cdn-thinkcomputers.netdna-ssl.com/wp-content/uploads/2013/06/P375SM-1.jpg"
+ }
+]
