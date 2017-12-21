@@ -1,0 +1,52 @@
+[
+ {
+  "id":"1",
+  "name":"Electrodomésticos",
+  "parent_id":"0"
+ }, 
+ {
+  "id":"2",
+  "name":"Indumentaria",
+  "parent_id":"0"
+ }, 
+ {
+  "id":"3",
+  "name":"Juguetaría",
+  "parent_id":"0"
+ }, 
+ {
+  "id":"4",
+  "name":"Decoración",
+  "parent_id":"0"
+ }, 
+ {
+  "id":"5",
+  "name":"TV leds",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"6",
+  "name":"Notebooks",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"7",
+  "name":"Impresoras",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"8",
+  "name":"Femenina",
+  "parent_id":"2"
+ }, 
+ {
+  "id":"9",
+  "name":"Masculina",
+  "parent_id":"2"
+ },
+  {
+  "id":"10",
+  "name":"Bebes y niños",
+  "parent_id":"2"
+ }
+]

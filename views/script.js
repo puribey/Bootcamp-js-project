@@ -1,82 +1,106 @@
+var categorias = ["Libros","Comics","Mangas"];
+var libros = ["Seleccionar subcategoría","Harry Potter","El señor de los anillos","Percy Jackson"];
+var comics = ["Seleccionar subcategoría","Marvel","DC"];
+var manga = ["Seleccionar subcategoría","Shonen","Shojo"];
+
+
 $(document).ready(function(){
-
- load_json_data('Categoria');
-
- function load_json_data(id, parent_id)
- {
-  var html_code = '';
-  $.getJSON('items.json', function(data){
-
-   html_code += '<option value="">Seleccione '+id+'</option>';
-   $.each(data, function(key, value){
-    if(id == 'Categoria')
-    {
-     if(value.parent_id == '0')
-     {
-      html_code += '<option value="'+value.id+'">'+value.name+'</option>';
-     }
+    selectCategoria(); 
+    cargarProductos();
+  $('#categoria').on('change', function(){
+    $('#subcat').html('');
+    var valCat = $('#categoria').val();
+    console.log(valCat);
+    if(valCat == "Libros"){
+      cargoSubcats(libros);
+    } else if (valCat == "Comics"){
+      cargoSubcats(comics);
+    } else if (valCat == "Mangas"){
+      cargoSubcats(manga);
+    } else {
+      $('#subcat').css({display:'none'});
     }
-    else
-    {
-     if(value.parent_id == parent_id)
-     {
-      html_code += '<option value="'+value.id+'">'+value.name+'</option>';
-     }
-    }
-   });
-   $('#'+id).html(html_code);
   });
-
- }
-
- $(document).on('change', '#Categoria', function(){
-  var categoria_id = $(this).val();
-  console.log(categoria_id);
-  if(categoria_id != '')
-  {
-   load_json_data('Subcategoria', categoria_id);
-   $('#Subcategoria').on('change',function(){
-      var subcat = $(this).val();
-      var json_html = '';
-      console.log(subcat);
-      $.getJSON('tv.json', function(data){
-        console.log(data);
-          $.each(data, function(key, value){
-          if (subcat == '5'){
-            json_html += '<div class="flex">';
-            json_html += '<img width="300px" src="'+value.foto+'"/>';
-            json_html += '<div>';
-            json_html += '<h2>'+value.name+'</h2>';
-            json_html += '<p>'+value.descripcion+'</p>'
-            json_html += '<button>Detail</button>'    
-            json_html += '</div>';            
-            json_html += '</div>';
-            $('#tv-container').append(json_html);
-          } 
-        });
-      });
-
-      $.getJSON('notebooks.json', function(data){
-        console.log(data);
-          $.each(data, function(key, value){
-          if (subcat == '6'){
-            json_html += '<div class="flex">';
-            json_html += '<img width="300px" src="'+value.foto+'"/>';
-            json_html += '<div>';
-            json_html += '<h2>'+value.name+'</h2>';
-            json_html += '<p>'+value.descripcion+'</p>'
-            json_html += '<button>Detail</button>'    
-            json_html += '</div>';            
-            json_html += '</div>';
-            $('#notebook-container').append(json_html);
-          } 
-        });
-      });
-
-
-
-   });
-  }
- });
+  $('#subcat').on('change', function(){
+    var valSub = $('#subcat').val();
+    console.log(valSub);
+    buscarProductos(valSub);
+  });
+  $(document).on('click','.btn',function(){
+    var ids = $(this).attr('id');
+    cargoModal(ids);
+  });
+    //$('#s2').on('change', function(event){
+      //$('div .img').not('batman').css({display:'none'});
+    //});
+    //$(document).on('click','#btn', function)// para el modal con detalle de producto
 });
 
+function cargarProductos(){
+  $.getJSON('items.json', function(data){
+    $.each(data,function(key,value){
+      var a = '<button id="'+value.id+'" class="relative btn" data-toggle="modal" data-target="#myModal"><img src="'+value.src+'" class="img-responsive img myImg"><p>'+value.name+'</p></button>';
+      $('#item-container').append(a);
+    });
+  });
+}
+
+function buscarProductos(valSub){
+  $('#item-container').html('');
+  $.getJSON('items.json', function(data){
+    $.each(data,function(key,value){
+      if(valSub == value.subcat){
+        var a = '<button id="'+value.id+'" class="relative btn" data-toggle="modal" data-target="#myModal"><img src="'+value.src+'" class="img-responsive img myImg"><p>'+value.name+'</p></button>';
+        $('#item-container').append(a);
+      } 
+    });
+  });
+}
+
+
+function selectCategoria(){ 
+for(var i =0; i< categorias.length; i++){
+      console.log(categorias);
+      var option = '<option value="'+categorias[i]+'">'+categorias[i]+'</option>';
+      $('#categoria').append(option);
+      console.log(option);
+    }
+}
+
+function cargoSubcats(subcats){
+  $('#subcat').css({display:'block'});
+  $.each(subcats, function(i, value){
+    var y = '<option >'+value+'</option>'
+    $('#subcat').append(y);
+  });
+}
+
+
+function cargoModal(ids){
+ $.getJSON('items.json', function(data){
+  $('#myModal').html('');
+    $.each(data,function(key,value){
+      if(ids == value.id){
+      var modal = '<div class="modal-dialog">'+
+         '<div class="modal-content">'+
+           '<div class="modal-header">'+
+             '<button type="button" class="close" data-dismiss="modal">&times;</button>'+
+             '<h2 class="modal-title">'+value.name+'</h2>'+
+           '</div>'+
+          '<div>'+
+              '<img src="'+value.src+'" class="img-responsive"/>'+
+           '</div>'+
+           '<div class="modal-body">'+
+             '<p>'+value.descripcion+'</p>'+
+             '<h3 class="modal-title"> Precio: '+value.precio+'</h3>'+
+           '</div>'+
+           '<div class="modal-footer">'+
+             '<button type="button" class="btn btn-success" data-dismiss="modal">Comprar</button>'+
+           '</div>'+
+         '</div>'+
+       '</div>';
+      $('.myModal').append(modal);
+      }
+    });
+ });
+}

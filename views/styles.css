@@ -1,5 +1,24 @@
+html {
+	font-size: 16px;
+}
+
 h1 {
 	margin:50px 0px;
+}
+
+h3 {
+	padding: 20px 0px;
+	color: green;
+}
+
+.selectors {
+	width: 70%;
+	min-width: 300px;
+	margin: 0 auto;
+}
+
+.subcat {
+	display: none;
 }
 
 .item-container {
@@ -7,20 +26,73 @@ h1 {
 }
 
 .flex {
+	display: grid;
+  	grid-template-columns: 33% 33% 33%;
+  	grid-gap: 30px;
+  	padding: 30px 50px;
+	border-radius: 2px;
+}
+
+.img {
+	width: 300px;
+	border: 2px solid pink;
+	padding: 40px 20px;
+}
+
+.relative {
 	display: flex;
+	position: relative;
+	text-align: center;
 	justify-content: center;
 	align-items: center;
-	flex-direction: row;
-	margin-bottom: 30px;
-	border: 1px solid #ccc;
-	border-radius: 2px;
-	box-shadow: 2px 2px 2px #ccc;
+	transition: all .6s ease-in-out;
+	border:0px;
+	background-color: white;
 }
 
-.display-none {
-	display:none;
-}
-
-.display-block {
+.relative p{
+	position: absolute;
 	display: block;
+	z-index: 10;
+	font-size: 2em;
+	color: transparent;
+	padding: 5px;
 }
+
+.img:hover {
+	opacity: 0.5;
+}
+
+.relative:hover p{
+	color:white;
+	background-color: black;
+}
+
+.relative:hover {
+	transform: scale(1.1);
+}
+
+.relative:focus {
+	outline: none;
+}
+
+.myModal {
+	text-align: center;
+}
+
+@media screen and (max-width: 1200px){
+	.flex {
+		grid-template-columns: 50% 50%;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.flex {
+		grid-template-columns: 100%;
+		grid-gap: 20px;
+	}
+	.item-container {
+		margin-top: 10px;
+	}
+}
+

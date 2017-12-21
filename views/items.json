@@ -1,52 +1,101 @@
 [
  {
+  "id":"0",
+  "name":"Harry Potter",
+  "src":"img/hp.jpg",
+  "precio":"Us$25.00",
+  "categoria":"Libros",
+  "subcat":"Harry Potter",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta nostrum illum vel enim praesentium sit libero doloremque, quas voluptates neque temporibus, magnam qui expedita esse animi, doloribus quia cupiditate itaque."
+ }, 
+ {
   "id":"1",
-  "name":"Electrodomésticos",
-  "parent_id":"0"
+  "name":"El señor de los anillos",
+  "src":"img/lotr.jpg",
+  "precio":"Us$30.00",
+  "categoria":"Libros",
+  "subcat":"El señor de los anillos",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo facere ab provident, veritatis impedit itaque adipisci maxime, voluptatum sint ipsam laudantium esse, praesentium quae tempora molestiae natus consectetur aliquam voluptatem."
  }, 
  {
   "id":"2",
-  "name":"Indumentaria",
-  "parent_id":"0"
+  "name":"Percy Jackson",
+  "src":"img/percy.jpg",
+  "precio":"Us$40.00",
+  "categoria":"Libros",
+  "subcat":"Percy Jackson",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima itaque animi tenetur quia hic, modi beatae ad fugiat tempore, veritatis, laudantium id a sint facilis illum necessitatibus fugit molestiae dicta."
  }, 
  {
   "id":"3",
-  "name":"Juguetaría",
-  "parent_id":"0"
+  "name":"X-Men",
+  "src":"img/xacademy.jpg",
+  "precio":"Us$5.00",
+  "categoria":"Comics",
+  "subcat":"Marvel",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima itaque animi tenetur quia hic, modi beatae ad fugiat tempore, veritatis, laudantium id a sint facilis illum necessitatibus fugit molestiae dicta."
  }, 
  {
   "id":"4",
-  "name":"Decoración",
-  "parent_id":"0"
+  "name":"Spider Man",
+  "src":"img/spiderman.jpg",
+  "precio":"Us$6.00",
+  "categoria":"Comics",
+  "subcat":"Marvel",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima itaque animi tenetur quia hic, modi beatae ad fugiat tempore, veritatis, laudantium id a sint facilis illum necessitatibus fugit molestiae dicta."
  }, 
  {
   "id":"5",
-  "name":"TV leds",
-  "parent_id":"1"
+  "name":"Batman",
+  "src":"img/batman.jpg",
+  "precio":"Us$8.00",
+  "categoria":"Comics",
+  "subcat":"DC",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima itaque animi tenetur quia hic, modi beatae ad fugiat tempore, veritatis, laudantium id a sint facilis illum necessitatibus fugit molestiae dicta."
  }, 
  {
   "id":"6",
-  "name":"Notebooks",
-  "parent_id":"1"
+  "name":"Superman",
+  "src":"img/superman.jpg",
+  "precio":"Us$5.00",
+  "categoria":"Comics",
+  "subcat":"DC",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima itaque animi tenetur quia hic, modi beatae ad fugiat tempore, veritatis, laudantium id a sint facilis illum necessitatibus fugit molestiae dicta."
  }, 
  {
   "id":"7",
-  "name":"Impresoras",
-  "parent_id":"1"
+  "name":"Sakura Card Captors",
+  "src":"img/sakura.jpg",
+  "precio":"Us$10.00",
+  "categoria":"Mangas",
+  "subcat":"Shojo",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima itaque animi tenetur quia hic, modi beatae ad fugiat tempore, veritatis, laudantium id a sint facilis illum necessitatibus fugit molestiae dicta."
  }, 
  {
   "id":"8",
-  "name":"Femenina",
-  "parent_id":"2"
- }, 
- {
-  "id":"9",
-  "name":"Masculina",
-  "parent_id":"2"
+  "name":"Chobits",
+  "src":"img/chobits.jpg",
+  "precio":"Us$15.00",
+  "categoria":"Mangas",
+  "subcat":"Shojo",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima itaque animi tenetur quia hic, modi beatae ad fugiat tempore, veritatis, laudantium id a sint facilis illum necessitatibus fugit molestiae dicta."
  },
   {
+  "id":"9",
+  "name":"Bleach",
+  "src":"img/bleach.jpg",
+  "precio":"Us$15.00",
+  "categoria":"Mangas",
+  "subcat":"Shonen",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima itaque animi tenetur quia hic, modi beatae ad fugiat tempore, veritatis, laudantium id a sint facilis illum necessitatibus fugit molestiae dicta."
+ },
+ {
   "id":"10",
-  "name":"Bebes y niños",
-  "parent_id":"2"
+  "name":"Naruto",
+  "src":"img/naruto.jpg",
+  "precio":"Us$10.00",
+  "categoria":"Mangas",
+  "subcat":"Shonen",
+  "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima itaque animi tenetur quia hic, modi beatae ad fugiat tempore, veritatis, laudantium id a sint facilis illum necessitatibus fugit molestiae dicta."
  }
 ]
